@@ -13,6 +13,6 @@ include_once 'libs/load.php';
         <?php load_templates("_getComment"); ?>
     </div>
     <?php load_templates("_listComment"); ?>
-    <script src="js/index.js"></script>
+    <script src="/Chat-Chorus/js/index.js"></script>
 </body>
 </html>
