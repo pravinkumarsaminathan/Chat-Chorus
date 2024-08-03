@@ -206,7 +206,7 @@ body {
 }
 
 .timestamplist {
-    color: #999;
+    color: #524e4e;
     font-size: 12px;
 }
 
@@ -219,7 +219,7 @@ body {
     align-items: center;
 }
 
-.like-button, .dislike-button, .reply-button {
+.like-button, .dislike-button {
     background: none;
     border: none;
     color: #007bff;
@@ -228,11 +228,11 @@ body {
 }
 
 .like-button:before {
-    content: '+';
+    content: '10';
     margin-right: 5px;
 }
 
 .dislike-button:before {
-    content: '-';
+    content: '20';
     margin-right: 5px;
 }

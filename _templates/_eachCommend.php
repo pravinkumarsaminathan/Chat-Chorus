@@ -11,9 +11,9 @@
                         Impressive! Though it seems the drag feature could be improved.Impressive! Though it seems the drag feature could be
                     </div>
                     <div class="commentlist-footer">
-                        <button class="like-button">+0</button>
-                        <button class="dislike-button">-</button>
-                        <button class="reply-button">Reply</button>
+                        <button class="like-button">👍</button>
+                        <button class="dislike-button">👎</button>
+                        
                     </div>
                 </div>
             </div>
