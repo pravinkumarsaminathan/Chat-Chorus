@@ -228,11 +228,9 @@ body {
 }
 
 .like-button:before {
-    content: '10';
     margin-right: 5px;
 }
 
 .dislike-button:before {
-    content: '20';
     margin-right: 5px;
 }

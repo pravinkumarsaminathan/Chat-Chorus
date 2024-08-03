@@ -12,19 +12,17 @@ $checkUserQuery = "SELECT * FROM list WHERE username='$username'";
 $result = $conn->query($checkUserQuery);
 
 if ($result->num_rows > 0) {
-    echo "Username already exists. Please choose a different username.";
+    // echo "Username already exists. Please choose a different username.";
+    echo "<script>alert('Username already exits. Please choose a different username.')</script>";
 } 
 else {
     $sql = "INSERT INTO `list` (`avatar`, `username`, `comment`, `date`)
     VALUES ('$avatar', '$username', '$comment', now());";
-    unset($_POST['avatar']);
-    unset($_POST['username']);
-    unset($_POST['comment']);
     if ($conn->query($sql) === TRUE) {
-        
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+    header("Refresh:-0; url=/Chat-Chorus/index.php");
 }
 }
 ?>
