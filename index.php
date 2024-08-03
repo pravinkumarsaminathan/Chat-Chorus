@@ -16,13 +16,16 @@ if ($result->num_rows > 0) {
     echo "<script>alert('Username already exits. Please choose a different username.')</script>";
 } 
 else {
+    ob_start();
     $sql = "INSERT INTO `list` (`avatar`, `username`, `comment`, `date`)
     VALUES ('$avatar', '$username', '$comment', now());";
     if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    header("Refresh:-0; url=/Chat-Chorus/index.php");
+    header("Refresh:0; url=/Chat-Chorus/index.php");
+    exit();
+    ob_end_flush();
 }
 }
 ?>

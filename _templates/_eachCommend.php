@@ -13,7 +13,6 @@
                     <div class="commentlist-footer">
                         <button class="like-button">👍</button>
                         <button class="dislike-button">👎</button>
-                        
                     </div>
                 </div>
             </div>

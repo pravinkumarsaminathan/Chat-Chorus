@@ -4,7 +4,8 @@
     </div>
 
 
-<?php 
+<?php
+ob_start(); 
 $conn = Database::getConnection();
 $len = Database::length();
 $comments = Database::comment();
@@ -17,7 +18,7 @@ for ($i=0;$i<$len;$i++)
                 <div class="commentlist-content">
                     <div class="commentlist-header">
                         <span class="usernamelist"><?php print($comments[$i]['username']); ?></span>
-                        <span class="timestamplist">1 month ago</span>
+                        <span class="timestamplist"><?php print(time_elapsed_string($comments[$i]['date']));?></span>
                     </div>
                     <div class="commentlist-body">
                         <?php print($comments[$i]['comment']); ?>
@@ -44,6 +45,7 @@ if (isset($_POST['like']))
     $update = "UPDATE `list` SET `like` = '$ans' WHERE `id` = '$update_id' ";
     $conn->query($update);
     header("Refresh:0; url=/Chat-Chorus/index.php");
+    exit();
 }
 else if (isset($_POST['dislike']))
 {
@@ -58,6 +60,8 @@ else if (isset($_POST['dislike']))
     $update = "UPDATE `list` SET `dislike` = '$ans' WHERE `id` = '$update_id' ";
     $conn->query($update);
     header("Refresh:0; url=/Chat-Chorus/index.php");
+    exit();
 }
 else
 {}
+ob_end_flush();
