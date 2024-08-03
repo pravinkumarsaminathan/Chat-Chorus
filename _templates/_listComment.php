@@ -12,7 +12,7 @@ for ($i=0;$i<$len;$i++)
 {?>
     <div class="commentlist">
                 <div class="avatarlist">
-                    <img src="<?php print($comments[$i]['avatar']); ?>" alt="Avatar">
+                    <img src="<?php ($comments[$i]['avatar'] == NULL) ? print("/Chat-Chorus/assests/default.svg") : print($comments[$i]['avatar']) ; ?>" alt="Avatar">
                 </div>
                 <div class="commentlist-content">
                     <div class="commentlist-header">
@@ -25,7 +25,6 @@ for ($i=0;$i<$len;$i++)
                     <div class="commentlist-footer">
                         <button class="like-button">👍</button>
                         <button class="dislike-button">👎</button>
-                        
                     </div>
                 </div>
             </div>
