@@ -1,4 +1,4 @@
-# Website Link : 
+# Website Link : https://chorus.selfmade.chat
 
 This website is vulnerable in XSS(Cross-Site Scripting).The user input from the comment section is not validated and sanitized.Due to that, XSS scripts(Javascript codes in usual) can be included in the comments.
 
@@ -6,7 +6,7 @@ This website is vulnerable in XSS(Cross-Site Scripting).The user input from the 
 
 ## Overview
 
-This section documents the XSS vulnerabilities identified in the website []. The vulnerabilities allow unauthorized access to the database, potentially leading to data exposure and manipulation.
+This section documents the XSS vulnerabilities identified in the website [https://chorus.selfmade.chat/]. The vulnerabilities allow unauthorized access to the database, potentially leading to data exposure and manipulation.
 
 ## XSS payloads
 
