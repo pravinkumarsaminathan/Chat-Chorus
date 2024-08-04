@@ -27,6 +27,7 @@ for ($i=0;$i<$len;$i++)
                         <form action="/Chat-Chorus/index.php" method="POST">
                         <button class="like-button" name = "like" value="<?php print($comments[$i]['id'])?>"><?php print($comments[$i]['like']);?>👍</button>
                         <button class="dislike-button" name = "dislike" value="<?php print($comments[$i]['id'])?>"><?php print($comments[$i]['dislike']);?>👎</button>
+                        <button class="dislike-button" name = "delete" value="<?php print($comments[$i]['id'])?>">❌</button>
                         </form>
                     </div>
                 </div>
@@ -59,6 +60,15 @@ else if (isset($_POST['dislike']))
     $ans = $results[0]['dislike'] + 1;
     $update = "UPDATE `list` SET `dislike` = '$ans' WHERE `id` = '$update_id' ";
     $conn->query($update);
+    header("Refresh:0; url=/Chat-Chorus/index.php");
+    exit();
+}
+else if (isset($_POST['delete']))
+{
+    $update_id = $_POST['delete'];
+    $sql = "DELETE FROM `list`
+            WHERE ((`id` = '$update_id'));";
+    $conn->query($sql);
     header("Refresh:0; url=/Chat-Chorus/index.php");
     exit();
 }

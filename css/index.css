@@ -219,7 +219,7 @@ body {
     align-items: center;
 }
 
-.like-button, .dislike-button {
+.like-button, .dislike-button, .delete-button {
     background: none;
     border: none;
     color: #007bff;
@@ -232,5 +232,9 @@ body {
 }
 
 .dislike-button:before {
+    margin-right: 5px;
+}
+
+.delete-button {
     margin-right: 5px;
 }
