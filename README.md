@@ -1,12 +1,12 @@
 # Website Link : 
 
-This website is vulnerable in XXS(Cross-Site Scripting).The user input from the comment section is not validated and sanitized.Due to that, XSS scripts(Javascript codes in usual) can be included in the comments.
+This website is vulnerable in XSS(Cross-Site Scripting).The user input from the comment section is not validated and sanitized.Due to that, XSS scripts(Javascript codes in usual) can be included in the comments.
 
-# XXS(Cross-Site Scripting) Vulnerability Experiment
+# XSS(Cross-Site Scripting) Vulnerability Experiment
 
 ## Overview
 
-This section documents the XXS vulnerabilities identified in the website []. The vulnerabilities allow unauthorized access to the database, potentially leading to data exposure and manipulation.
+This section documents the XSS vulnerabilities identified in the website []. The vulnerabilities allow unauthorized access to the database, potentially leading to data exposure and manipulation.
 
 ## XSS payloads
 
@@ -109,3 +109,7 @@ Explanation: This payload uses an <svg> tag to embed an <script> tag. When the S
  <script>alert(document.cookie)</script>
 ```
 Explaination: This payload injects a <script> tag directly into the HTML. When the browser encounters this tag, it executes the JavaScript code inside, will display all the cookies stored by the site in an alert box.Then the cookies can be sent to the attacker's device in many ways.
+
+## XSS Prevention
+
+To protect your application from XSS vulnerabilities, always sanitize and validate a user inputs.
