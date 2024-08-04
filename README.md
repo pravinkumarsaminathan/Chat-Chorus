@@ -55,6 +55,7 @@ Explanation: This payload uses an <svg> (Scalable Vector Graphics) tag with an o
 <input type="text" value="TEXT" onfocus="alert(\'YOU CAN NOT OVERWRITE\')">
 ```
 Explanation: This payload uses an <input> tag with an onfocus event handler. When the user focuses on the input field (e.g., clicks on it), the browser executes the JavaScript code, causing an alert with the message "YOU CAN NOT OVERWRITE".
+
 Note : After execution of this comment, if you receive alert message continously just reload the page.
 
 ### 8. Malicious URL:
@@ -68,6 +69,7 @@ Explanation: This payload uses an <a> (anchor) tag with an onclick event handler
 <textarea onfocus="alert(\'YOU CAN NOT OVERWRITE\')">Focus on me</textarea>
 ```
 Explanation: This payload uses a <textarea> tag with an onfocus event handler. When the user focuses on the textarea (e.g., clicks on it), the browser executes the JavaScript code, causing an alert with the message "YOU CAN NOT OVERWRITE".
+
 Note : After execution of this comment, if you receive alert message continously just reload the page.
 
 ### 10. Iframe Tag:
