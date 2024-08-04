@@ -87,3 +87,9 @@ Explanation: This payload uses a <style> tag to inject CSS that sets the backgro
 <svg><script>alert(\'SVG executed\')</script></svg>
 ```
 Explanation: This payload uses an <svg> tag to embed an <script> tag. When the SVG is loaded, the browser executes the JavaScript code inside the <script> tag, causing an alert with the message "SVG executed".
+
+### 13. COOKIE HIJACKING:
+```HTML
+ <script>alert(document.cookie)</script>
+```
+Explaination: This payload injects a <script> tag directly into the HTML. When the browser encounters this tag, it executes the JavaScript code inside, will display all the cookies stored by the site in an alert box.Then the cookies can be sent to the attacker's device in many ways.
